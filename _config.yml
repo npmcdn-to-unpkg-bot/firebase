@@ -24,26 +24,6 @@ javascript:
   - /js/react/react.js
   - /js/react/react-dom.js
 
-javascript-not-used:
-  - https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js
-  - https://npmcdn.com/bootstrap@3.3.6
-  - /js/bootstrap.min.js
-  - https://fb.me/react-15.0.2.js
-  - https://fb.me/react-dom-15.0.2.js
-  - https://npmcdn.com/jquery@2.2.3
-  - /js/jquery.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.min.js
-  - https://npmcdn.com/react@0.14.2/dist/react.js
-  - https://npmcdn.com/react-dom@0.14.2/dist/react-dom.js
-  - /js/react/react.js
-  - /js/react/react-dom.js
-javascript-react-towel-has-these:
-  - https://npmcdn.com/react@0.14.2/dist/react.js
-  - https://npmcdn.com/react-dom@0.14.2/dist/react-dom.js
-  - https://npmcdn.com/throw-in-the-towel@2
-babel-not-used-with-towel:
-  - https://cdnjs.cloudflare.com/ajax/libs/babelcore/5.8.23/browser.min.js
-
 # Define Menu Items for Main and Footer menu
 
 menuitems:
