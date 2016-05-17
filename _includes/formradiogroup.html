@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label>{{ formradiogroup.label }}</label>
+    {% for item in formradiogroup.items %}
+    {% assign radioname = item %}
+    {% assign radioid = item %}
+    <div class="radio">
+        <label>
+            <input type="radio" name="{{ formradiogroup.id }}" id="{{ radioid }}" value="{{ radioid }}">
+            {{ radioname }}
+        </label>
+    </div>
+    {% endfor %}
+</div>

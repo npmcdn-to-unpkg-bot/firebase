@@ -1,0 +1,30 @@
+---
+title: 404 - Page Not Found
+layout: default
+sitemap: false
+---
+
+<p>
+    The page you are looking for does not exist or has been deleted. Please
+    choose where you would like to go now
+</p>
+
+<ul>
+    {% assign pages = site.pages | sort: "title" %}
+    {% for page in pages %}
+    {% if page.sitemap != false %}
+
+    {% assign title = page.title %}
+    {% if title == blank %}
+    {% assign title = "No Title" %}
+    {% endif %}
+
+    <li>
+        <a href="{{ page.dir }}">
+            {{ title }}
+        </a>
+    </li>
+
+    {% endif %}
+    {% endfor %}
+</ul>

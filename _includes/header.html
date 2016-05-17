@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <img src="/logo.png">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                {% for menuitem in site.menuitems %}
+                {% if menuitem.url == page.dir %}
+                {% assign class = "active" %}
+                {% else %}
+                {% assign class = "normal" %}
+                {% endif %}
+
+                <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+
+                {% endfor %}
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>

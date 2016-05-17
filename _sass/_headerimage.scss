@@ -1,0 +1,41 @@
+
+.headerimage {
+    min-height: 250px;
+    background-image: url(header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+        text-align: center;
+        color: white;
+        padding-top: 75px;
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .headerimage {
+        min-height: 300px;
+        h1 {
+            padding-top: 150px;
+        }
+    }
+}
+@media (min-width: $screen-md-min) {
+    .headerimage {
+        min-height: 400px;
+        h1 {
+            padding-top: 200px;
+        }
+    }
+}
+@media (min-width: $screen-lg-min) {
+    .headerimage {
+        min-height: 500px;
+        h1 {
+            padding-top: 250px;
+        }
+    }
+}

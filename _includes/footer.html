@@ -1,0 +1,63 @@
+<footer class="footer container-fluid">
+    <div class="upper row">
+        <div class="container">
+            <div class="col-xs-12 col-sm-5">
+                <h4>
+                    {{ site.title }}
+                </h4>
+
+                {% if site.email != null %}
+                <p class="footer-email">
+                    <a href="mailto:{{ site.email }}">
+                        {{ site.email }}
+                    </a>
+                </p>
+                {% endif %}
+
+                {% if site.phone != null %}
+                <p class="footer-phone">
+                    <a href="tel:{{ site.phoneref }}">
+                        {{ site.phone }}
+                    </a>
+                </p>
+                {% endif %}
+
+                {% if site.address != null %}
+                <p class="footer-address">
+                    {% for item in site.address %}
+                    {{ item }}
+                    {% if item.last %}
+                    {% else %}
+                    <br />
+                    {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                <h4>
+                    Check out the rest of the site:
+                </h4>
+                <ul class="footer-menu list-unstyled">
+
+                    {% for menuitem in site.menuitems %}
+                    <li class="footer-menu-item">
+                        <a href="{{ menuitem.url }}">
+                            {{ menuitem.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="lower row">
+        <div class="container">
+            <div class="col-xs-12">
+                <i class="glyphicon glyphicon-copyright-mark"></i> {{ site.title }}
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,11 @@
+<ul class="footer-menu list-unstyled">
+
+    {% for menuitem in site.menuitems %}
+    <li class="footer-menu-item">
+        <a href="{{ menuitem.url }}">
+            {{ menuitem.title }}
+        </a>
+    </li>
+    {% endfor %}
+
+</ul>

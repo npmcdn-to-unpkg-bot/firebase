@@ -1,0 +1,43 @@
+{% if site.babel or page.babel %}
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babelcore/5.8.23/browser.min.js"></script> -->
+  <script src="https://npmcdn.com/throw-in-the-towel@2" charset="utf-8"></script>
+  <!-- <script src="https://npmcdn.com/react-towel@2" charset="utf-8"></script> -->
+{% endif %}
+
+{% for js in site.javascript %}
+  {% if js.path == nil %}
+    {% assign path = js %}
+    {% assign type = "text/javascript" %}
+  {% else %}
+    {% assign path = js.path %}
+    {% assign type = js.type %}
+    {% if type == nil %}
+      type = "Xtext/javascript"
+    {% endif %}
+  {% endif %}
+  <script type="{{ type }}" src="{{ path }}"></script>
+{% endfor %}
+
+{% for js in page.javascript %}
+  {% if js.path == nil %}
+    {% assign path = js %}
+    {% assign type = "text/javascript" %}
+  {% else %}
+    {% assign path = js.path %}
+    {% assign type = js.type %}
+    {% if type == nil %}
+      type = "Xtext/javascript"
+    {% endif %}
+  {% endif %}
+  <script type="{{ type }}" src="{{ path }}"></script>
+{% endfor %}
+
+{% for js in site.babel %}
+  <script type="text/babel" src="{{ js }}"></script>
+{% endfor %}
+
+{% for js in page.babel %}
+  <script type="text/babel" src="{{ js }}"></script>
+{% endfor %}
+
+{% include googleanalytics.html %}

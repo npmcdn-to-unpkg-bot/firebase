@@ -1,0 +1,25 @@
+---
+title: Site Map
+layout: default
+sitemap: false
+---
+
+<ul>
+    {% assign pages = site.pages | sort: "title" %}
+    {% for page in pages %}
+    {% if page.sitemap != false %}
+
+    {% assign title = page.title %}
+    {% if title == blank %}
+    {% assign title = "No Title" %}
+    {% endif %}
+
+    <li>
+        <a href="{{ page.dir }}">
+            {{ title }}
+        </a>
+    </li>
+
+    {% endif %}
+    {% endfor %}
+</ul>

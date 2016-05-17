@@ -1,0 +1,14 @@
+<ul class="nav navbar-nav navbar-right">
+
+    {% for menuitem in site.menuitems %}
+    {% if menuitem.url == page.dir %}
+    {% assign class = "active" %}
+    {% else %}
+    {% assign class = "normal" %}
+    {% endif %}
+
+    <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+
+    {% endfor %}
+
+</ul>
