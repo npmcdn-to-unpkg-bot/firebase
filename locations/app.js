@@ -17,7 +17,7 @@ class MainListItem extends React.Component {
           { this.props.item.phone }
         </td>
         <td>
-          <button onClick={this.props.removeItem.bind(null, this.props.item.handle)}>
+          <button onClick={this.props.removeItemFn.bind(null, this.props.item.handle)}>
             Remove
           </button>
         </td>
@@ -73,7 +73,7 @@ class MainList extends React.Component {
                   <MainListItem
                     item={item}
                     key={item.handle}
-                    removeItem={this.props.removeItem} />
+                    removeItemFn={this.props.removeItemFn} />
                 );
               }
             )}
@@ -87,10 +87,19 @@ class MainList extends React.Component {
 class MainEditForm extends React.Component {
   constructor() {
     super();
+    this.clearState();
+  }
+  clearState() {
     this.state = {
+      handle: '',
       title: '',
       phone: ''
     };
+  }
+  onChangeHandle(e) {
+    this.setState({
+      handle: e.target.value
+    });
   }
   onChangeTitle(e) {
     this.setState({
@@ -104,20 +113,22 @@ class MainEditForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.title && this.state.title.trim().length !== 0) {
-      let item = {};
-      item.title = this.state.title;
-      item.phone = this.state.phone;
-      this.props.app.firebaseRef.push(item);
-      this.setState({
-        title: '',
-        phone: ''
-      });
-    }
+    console.log(this.props);
+    this.props.app.addItem(this.state.handle, this.state);
+    this.clearState();
   }
   render() {
     return (
       <form onSubmit={ this.handleSubmit.bind(this) } className="form-horizontal">
+        <div className="form-group">
+          <label className="col-xs-2 control-label">Handle</label>
+          <div className="col-xs-10">
+            <input
+              className="form-control"
+              onChange={ this.onChangeHandle.bind(this) }
+              value={ this.state.handle } />
+          </div>
+        </div>
         <div className="form-group">
           <label className="col-xs-2 control-label">Title</label>
           <div className="col-xs-10">
@@ -157,22 +168,42 @@ class MainApp extends React.Component {
     };
   }
   componentWillMount() {
-    this.firebaseRef.limitToLast(25).on('value', function(dataSnapshot) {
-      var items = [];
-      dataSnapshot.forEach(function(childSnapshot) {
-        var item = childSnapshot.val();
-        item.handle = childSnapshot.key();
-        items.push(item);
-      }.bind(this));
-      this.setState({
-        items: items
-      });
-    }.bind(this));
+    this.firebaseRef.on('value', this.addItemsFromResponse.bind(this));
   }
   componentWillUnmount() {
     this.firebaseRef.off();
   }
-  addItem(dataSnapshot) {
+  addItemsFromResponse(dataSnapshot) {
+    var items = [];
+    dataSnapshot.forEach(function(childSnapshot) {
+      var item = childSnapshot.val();
+      item.handle = childSnapshot.key();
+      items.push(item);
+    }.bind(this));
+    this.setState({
+      items: items
+    });
+  }
+  addItem(handle, values) {
+    console.log('addItem', handle, values);
+    if (!handle || handle.trim().length == 0) {
+      console.error('addItem', 'Invalid Handle', handle);
+      return 'Invalid Handle Length';
+    }
+    if (!values.title || values.title.trim().length == 0) {
+      console.error('addItem', 'Invalid Title', values);
+      return 'Invalid Title';
+    }
+    let item = {};
+    item.handle = values.handle;
+    item.title = values.title;
+    item.phone = values.phone;
+    console.log('addItem', 'item', item);
+    // define the id to use
+    let send = {};
+    send[handle] = item;
+    console.log('addItem', 'send', send);
+    this.firebaseRef.update(send);
   }
   removeItem(handle) {
     let firebaseRef = new Firebase(firebaseURL);
@@ -181,36 +212,12 @@ class MainApp extends React.Component {
   render() {
     return (
       <div>
-        <MainList items={ this.state.items } removeItem={ this.removeItem } />
-        <MainEditForm app={ this } />
+        <MainList items={this.state.items} removeItemFn={this.removeItem} />
+        <MainEditForm app={this} />
       </div>
     )
   }
 }
-
-// let ReactRouter = window.ReactRouter
-// let Router = ReactRouter.Router
-// let Route = ReactRouter.Route
-// let Link = ReactRouter.Link
-// let Redirect = ReactRouter.Redirect
-// let History = ReactRouter.hashHistory
-//
-// class StaticRoute extends React.Component {
-//   render () {
-//     return (
-//       <Router history={History}>
-//         <Route path="/" component={MainApp} />
-//         <Route path="/add" component={MainEditForm} />
-//         <Route path="/edit/:handle" component={MainEditForm} />
-//       </Router>
-//       );
-//   }
-// }
-//
-// ReactDOM.render(
-//   <StaticRoute />,
-//   document.getElementById('app')
-// );
 
 ReactDOM.render(
   <MainApp />,
