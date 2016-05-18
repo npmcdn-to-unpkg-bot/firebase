@@ -3,3 +3,4 @@ _site
 Thumbs.db
 desktop.ini
 /.jekyll-metadata
+/node_modules

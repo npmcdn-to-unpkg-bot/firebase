@@ -1,0 +1,37 @@
+{
+  "name": "jekyll",
+  "version": "1.0.0",
+  "description": "Jekyll, React and Firebase",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babel-cli": "^6.8.0",
+    "gulp": "^3.9.1",
+    "react": "^15.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-core": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-connect": "^4.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/geofftech/firebase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/geofftech/firebase/issues"
+  },
+  "homepage": "https://gitlab.com/geofftech/firebase#README"
+}

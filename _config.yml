@@ -16,6 +16,12 @@ googleanalytics:
 sass:
   style: compressed
 
+exclude:
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - firebase.js
+
 # Javascript files
 
 javascript:
