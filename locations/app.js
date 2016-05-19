@@ -1,5 +1,5 @@
 
-const firebaseDatabase = 'luminous-fire-3175';
+const firebaseDatabase = 'testing-2f687';
 const firebasetable = 'location';
 const firebaseURL = 'https://'+firebaseDatabase+'.firebaseio.com/'+firebasetable;
 
