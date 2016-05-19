@@ -21,6 +21,11 @@ exclude:
   - package.json
   - gulpfile.js
   - firebase.js
+  - README.md
+
+# Gems
+gems:
+  - jekyll-babel
 
 # Javascript files
 

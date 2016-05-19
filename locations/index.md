@@ -10,7 +10,7 @@ babel:
 
 This is a list of all locations in your organisation. They can be found here
 
-* [Location Database Interface](https://luminous-fire-3175.firebaseio.com/location)
+* [Location Database Interface](https://console.firebase.google.com/project/testing-2f687/overview)
 
 To do list
 
