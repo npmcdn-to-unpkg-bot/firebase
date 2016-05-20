@@ -5,10 +5,10 @@ class NavBar extends React.Component {
   render() {
     return (
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="add">Add</Link></li>
-        <li><Link to="edit/12">Edit</Link></li>
-        <li><Link to="delete/12">Delete</Link></li>
+        <li><Link to="/" activeClassName="active">Home</Link></li>
+        <li><Link to="add" activeClassName="active">Add</Link></li>
+        <li><Link to="edit/12" activeClassName="active">Edit</Link></li>
+        <li><Link to="delete/12" activeClassName="active">Delete</Link></li>
       </ul>
     )
   }
