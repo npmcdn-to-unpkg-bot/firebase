@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class HomeList extends React.Component {
   render() {
@@ -15,4 +16,4 @@ class HomeList extends React.Component {
   }
 }
 
-export default HomeList;  
+export default HomeList;
