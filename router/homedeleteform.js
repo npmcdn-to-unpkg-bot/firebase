@@ -6,7 +6,7 @@ class HomeDeleteForm extends React.Component {
   render() {
     return (
       <div>
-        <h1>Delete</h1>
+        <h1>Delete '{this.props.params.id}'</h1>
         <NavBar />
       </div>
     )
