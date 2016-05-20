@@ -21,9 +21,9 @@ class HomeListItem extends React.Component {
           { this.props.item.phone }
         </td>
         <td>
-          <button onClick={this.props.removeItemFn.bind(null, this.props.item.handle)}>
-            Remove
-          </button>
+          <Link to={{ pathname:"edit/"+this.props.item.handle, query:{id: this.props.item.handle} }}>Edit</Link>
+          :
+          <Link to={{ pathname:"delete/"+this.props.item.handle, query:{id: this.props.item.handle} }}>Delete</Link>
         </td>
       </tr>
     )

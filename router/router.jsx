@@ -14,9 +14,9 @@ import NotFound from './notfound.js';
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={HomeList} />
-    <Route path="/add" component={HomeAddForm} />
-    <Route path="/edit/:id" component={HomeEditForm} />
-    <Route path="/delete/:id" component={HomeDeleteForm} />
+    <Route name="homeadd" path="/add" component={HomeAddForm} />
+    <Route name="homeedit" path="/edit/:id" component={HomeEditForm} />
+    <Route name="homedelete" path="/delete/:id" component={HomeDeleteForm} />
     <Route path="*" component={NotFound} />
   </Router>
   ), document.getElementById('app')
