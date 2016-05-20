@@ -2,22 +2,12 @@
 import React, { PropTypes, Component } from 'react';
 // import React from 'react';
 import { Route, Router } from 'react-router';
-// import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
+import { DefaultRoute, Link, RouteHandler } from 'react-router';
 
-class HomeList extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Home</h1>
-        <ul>
-          <li>
-            <a to="add">Add</a>
-          </li>
-        </ul>
-      </div>
-    )
-  }
-}
+import LoginHandler from './login.js';
+import HomeList from './homelist.js';
+
+
 
 class HomeAddForm extends React.Component {
   render() {
