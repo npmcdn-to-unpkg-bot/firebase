@@ -9,6 +9,7 @@ import HomeList from './homelist.js';
 import HomeAddForm from './homeaddform.js';
 import HomeEditForm from './homeeditform.js';
 import HomeDeleteForm from './homedeleteform.js';
+import NotFound from './notfound.js';
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -16,6 +17,7 @@ ReactDOM.render((
     <Route path="/add" component={HomeAddForm} />
     <Route path="/edit/:id" component={HomeEditForm} />
     <Route path="/delete/:id" component={HomeDeleteForm} />
+    <Route path="*" component={NotFound} />
   </Router>
   ), document.getElementById('app')
 );
