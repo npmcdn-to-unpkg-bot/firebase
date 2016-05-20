@@ -6,32 +6,9 @@ import { DefaultRoute, Link, RouteHandler } from 'react-router';
 
 import LoginHandler from './login.js';
 import HomeList from './homelist.js';
-
-
-
-class HomeAddForm extends React.Component {
-  render() {
-    return (
-      <h1>Add</h1>
-    )
-  }
-}
-
-class HomeEditForm extends React.Component {
-  render() {
-    return (
-      <h1>Edit</h1>
-    )
-  }
-}
-
-class HomeDeleteForm extends React.Component {
-  render() {
-    return (
-      <h1>Delete</h1>
-    )
-  }
-}
+import HomeAddForm from './homeaddform.js';
+import HomeEditForm from './homeeditform.js';
+import HomeDeleteForm from './homedeleteform.js';
 
 ReactDOM.render((
   <Router>
