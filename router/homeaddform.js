@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
+import NavBar from './navbar.js';
 
 class HomeAddForm extends React.Component {
   render() {
     return (
-      <h1>Add</h1>
+      <div>
+        <h1>Add</h1>
+        <NavBar />
+      </div>
     )
   }
 }
