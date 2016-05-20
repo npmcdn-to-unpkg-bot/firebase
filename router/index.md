@@ -1,13 +1,13 @@
 ---
 title: Router
 layout: default
-javascript:
+xjavascript:
 - https://npmcdn.com/react-router@2.4.0
-babel:
+javascript:
 - router.js
 ---
 
-Use the React Router to render different elements based on the URL
+Use the `React Router` to render different elements based on the URL
 
 ---
 

@@ -2,7 +2,7 @@
 title: Search
 layout: default
 babel:
-- search.js
+- search.jsx
 ---
 
 Use a `liquid` script to build a Javascript array of pages that I can search

@@ -2,7 +2,7 @@
 title: About
 layout: default
 babel:
-- about.js
+- about.jsx
 ---
 
 Simple about page load `hello` using a React component

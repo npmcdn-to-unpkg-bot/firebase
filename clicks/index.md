@@ -2,7 +2,7 @@
 title: Clicks Counter
 layout: default
 babel:
-- counter.js
+- counter.jsx
 ---
 
 Click on the text to increment counter

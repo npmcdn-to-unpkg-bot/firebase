@@ -5,7 +5,7 @@ javascript:
 - https://cdn.firebase.com/js/client/2.4.0/firebase.js
 - https://cdn.firebase.com/libs/reactfire/0.6.0/reactfire.min.js
 babel:
-- app.js
+- app.jsx
 ---
 
 This is an example of using `FireBase` and React together.

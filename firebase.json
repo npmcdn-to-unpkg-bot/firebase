@@ -1,5 +1,4 @@
 {
-  "firebase": "testing-2f687",
   "public": "_site",
   "ignore": [
     "firebase.json",

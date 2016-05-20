@@ -5,7 +5,7 @@ javascript:
 - https://cdn.firebase.com/js/client/2.4.2/firebase.js
 - https://cdn.firebase.com/libs/reactfire/0.7.0/reactfire.js
 babel:
-- app.js
+- app.jsx
 ---
 
 This is a list of all locations in your organisation. They can be found here

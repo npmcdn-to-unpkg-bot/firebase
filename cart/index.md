@@ -2,7 +2,7 @@
 title: Shopping Cart
 layout: default
 babel:
-- cart.js
+- cart.jsx
 ---
 
 This is a shopping cart where I am trying to pull together a cart link, add to

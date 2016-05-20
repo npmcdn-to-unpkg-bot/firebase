@@ -1,10 +1,9 @@
 {
-  "name": "jekyll",
+  "name": "testing",
   "version": "1.0.0",
   "description": "Jekyll, React and Firebase",
   "main": "gulpfile.js",
   "dependencies": {
-    "babel-cli": "^6.8.0",
     "gulp": "^3.9.1",
     "react": "^15.0.2"
   },
@@ -18,13 +17,23 @@
     "grunt-react": "^0.12.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.0.0",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-react": "^3.1.0",
+    "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "react": "^15.0.2",
+    "react-router": "^2.4.1",
+    "reactify": "^1.1.1",
     "require-dir": "^0.3.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "b": "babel _src -d app --debug --presets es2015",
+    "b1": "babel _src/ -d app/"
   },
   "repository": {
     "type": "git",

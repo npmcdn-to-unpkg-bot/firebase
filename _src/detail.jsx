@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 class Detail extends React.Component {
     render() {
@@ -6,4 +6,4 @@ class Detail extends React.Component {
     }
 }
 
-export default Detail;
+// export default Detail;
