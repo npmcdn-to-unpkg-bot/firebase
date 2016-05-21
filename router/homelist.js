@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavBar from './navbar.js';
-// import Firebase from 'reactfire';
 
 const firebaseDatabase = 'testing-2f687';
 const firebasetable = 'location';
@@ -21,6 +20,8 @@ class HomeListItem extends React.Component {
           { this.props.item.phone }
         </td>
         <td>
+          <Link to={{ pathname:this.props.item.handle, query:{id: this.props.item.handle} }}>View</Link>
+          :
           <Link to={{ pathname:"edit/"+this.props.item.handle, query:{id: this.props.item.handle} }}>Edit</Link>
           :
           <Link to={{ pathname:"delete/"+this.props.item.handle, query:{id: this.props.item.handle} }}>Delete</Link>
@@ -93,7 +94,7 @@ class HomeList extends React.Component {
     super();
     this.firebaseRef = new Firebase(firebaseURL);
     this.state = {
-      items: [],
+      items: []
     };
   }
   componentWillMount() {
@@ -106,9 +107,11 @@ class HomeList extends React.Component {
     var items = [];
     dataSnapshot.forEach(function(childSnapshot) {
       var item = childSnapshot.val();
+      console.log('addItemsFromResponse', 'item', item);
       item.handle = childSnapshot.key();
       items.push(item);
     }.bind(this));
+    console.log('addItemsFromResponse', 'items', items);
     this.setState({
       items: items
     });
@@ -146,4 +149,5 @@ class HomeList extends React.Component {
     )
   }
 }
+
 export default HomeList;
