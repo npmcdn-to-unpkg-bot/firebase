@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NavBar from './navbar.js';
+import NavBar from './navbar.jsx';
 
 class HomeDeleteForm extends React.Component {
   render() {

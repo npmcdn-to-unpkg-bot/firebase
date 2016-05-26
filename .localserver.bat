@@ -1,3 +1,3 @@
-g:
-cd "G:\Webs - Testing\react\jekyll"
-jekyll server
+
+cd C:\Users\Geoff\odrive\GeoffTech\Dev\react\jekyll
+jekyll server --incremental

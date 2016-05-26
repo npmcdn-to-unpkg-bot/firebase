@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NavBar from './navbar.js';
+import NavBar from './navbar.jsx';
 
-class HomeEditForm extends React.Component {
+class NotFound extends React.Component {
   render() {
     return (
       <div>
-        <h1>Edit '{this.props.params.id}'</h1>
+        <h1>Not Found</h1>
         <NavBar />
       </div>
     )
   }
 }
 
-export default HomeEditForm;
+export default NotFound;

@@ -24,6 +24,7 @@ exclude:
   - README.md
 
 # Gems
+
 gems:
   - jekyll-babel
 

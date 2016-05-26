@@ -23,7 +23,8 @@ var path = {
 };
 
 //Default task. This will be run when no task is passed in arguments to gulp
-gulp.task("default",["app", "startServer"]);
+gulp.task("default2",["buildrouter"]);
+gulp.task("default2",["app", "startServer"]);
 
 //Copy static files from html folder to build folder
 gulp.task("copyStaticFiles", function(){
@@ -86,7 +87,7 @@ gulp.task('buildrouter2', function(){
 // This one works
 gulp.task("buildrouter", function(){
     return browserify({
-        entries: ["./router/router.jsx"],
+        entries: ["./router/router.babel"],
         debug: true
     })
     .transform(babelify.configure({
