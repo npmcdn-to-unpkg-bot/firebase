@@ -4,13 +4,13 @@ import React, { PropTypes, Component } from 'react';
 import { Route, Router } from 'react-router';
 import { DefaultRoute, Link, RouteHandler, hashHistory } from 'react-router';
 
-import LoginHandler from './login.js';
-import HomeList from './homelist.js';
-import HomeView from './homeview.js';
-import HomeAddForm from './homeaddform.js';
-import HomeEditForm from './homeeditform.js';
-import HomeDeleteForm from './homedeleteform.js';
-import NotFound from './notfound.js';
+import LoginHandler from './login.jsx';
+import HomeList from './homelist.jsx';
+import HomeView from './homeview.jsx';
+import HomeAddForm from './homeaddform.jsx';
+import HomeEditForm from './homeeditform.jsx';
+import HomeDeleteForm from './homedeleteform.jsx';
+import NotFound from './notfound.jsx';
 
 ReactDOM.render((
   <Router history={hashHistory}>

@@ -65,7 +65,7 @@ This is used for other assets like images
 
 ### Javascript to use
 
-The __NPM CDN__ version fails with error `Firebase is not defined` and they files are different between the two CDNs 
+The __NPM CDN__ version fails with error `Firebase is not defined` and they files are different between the two CDNs
 
 - https://cdn.firebase.com/js/client/2.4.2/firebase.js
 - https://cdn.firebase.com/libs/reactfire/0.7.0/reactfire.js
@@ -87,3 +87,9 @@ A big brother includes React and React Dom is
 * [React Towel](https://github.com/danmartinez101/react-towel)
 
 In production, we will want to compile it.
+
+
+
+## Reference
+
+* http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/

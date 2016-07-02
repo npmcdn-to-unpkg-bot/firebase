@@ -5,7 +5,7 @@ module Jekyll
       priority :low
 
       DEFAULT_CONFIGURATION = {
-        'babel_js_extensions' => 'es6, babel, jsx'
+        'babel_js_extensions' => 'babel'
       }
 
       def initialize(config = {})
@@ -17,7 +17,7 @@ module Jekyll
       end
 
       def output_ext(ext)
-        ".js"
+        ".js2"
       end
 
       def convert(content)

@@ -11,6 +11,9 @@ class CartIcon extends React.Component {
 }
 
 class CartAdd extends React.Component {
+  doOnClick() {
+    alert('click');
+  }
   render() {
     return (
       <button className="btn btn-primary">
@@ -99,22 +102,27 @@ class CartTableItem extends React.Component {
 }
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.setState({
+      items = [
+       {
+         id: 1,
+         name: "hello"
+       },
+       {
+         id: 2,
+         name:"there"
+       }
+     ]
+    });
+  }
   render() {
-    let items = [
-      {
-        id: 1,
-        name: "hello"
-      },
-      {
-        id: 2,
-        name:"there"
-      }
-    ];
     return (
       <div>
         <CartIcon />
         <CartAdd />
-        <CartTable items={items} />
+        <CartTable items={this.state.items} />
       </div>
     );
   }

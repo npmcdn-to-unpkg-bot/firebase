@@ -2,8 +2,9 @@
 title: "Locations"
 layout: default
 javascript:
-- https://cdn.firebase.com/js/client/2.4.2/firebase.js
-- https://cdn.firebase.com/libs/reactfire/0.7.0/reactfire.js
+- https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js
+- https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js
+- https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js
 babel:
 - app.jsx
 ---

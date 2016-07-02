@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import NavBar from './navbar.jsx';
 
-const firebaseDatabase = 'testing-2f687';
-const firebasetable = 'location';
-const firebaseURL = 'https://'+firebaseDatabase+'.firebaseio.com/'+firebasetable;
-
 class HomeView extends React.Component {
   constructor() {
     super();
