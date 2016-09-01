@@ -2,10 +2,10 @@
 title: "Locations"
 layout: default
 javascript:
-- https://npmcdn.com/firebase@2.4.0
-- https://npmcdn.com/reactfire@0.6.0
+- https://unpkg.com/firebase@2.4.0
+- https://unpkg.com/reactfire@0.6.0
 not-used:
-- https://npmcdn.com/react-router@2.4.0
+- https://unpkg.com/react-router@2.4.0
 babel:
 - app.js
 ---

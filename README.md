@@ -13,9 +13,9 @@ The idea is to have a single system that manages data. The front end - based in 
 * [React Router](https://github.com/reactjs/react-router)
 * [FireBase](https://www.firebase.com) is a hosted database system that uses document format to store data in what ever structure we want
 * [jQuery](http://jquery.com)
-* [npmcdn.com](http:/npmcdn.com) to include JS files from a CDN. Try and use a single CDN for as much as possible to limit the need for DNS lookups.
+* [unpkg.com](http:/unpkg.com) to include JS files from a CDN. Try and use a single CDN for as much as possible to limit the need for DNS lookups.
 * [Throw in the Towel](https://github.com/danmartinez101/throw-in-the-towel) transcribes ES2015 into ES5
-  * https://npmcdn.com/throw-in-the-towel@2
+  * https://unpkg.com/throw-in-the-towel@2
 
 React
 -----
